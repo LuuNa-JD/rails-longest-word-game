@@ -1,0 +1,14 @@
+<h1>Résultat du jeu</h1>
+
+<div class="result">
+  <% if @result == "valid" %>
+    <p class="success"><%= @word %> est un mot valide et vous avez gagné!</p>
+    <%= link_to "Nouvelle partie", root_path, class: "btn btn-primary" %>
+  <% elsif @result == "valid_not_english" %>
+    <p class="warning"><%= @word %> est un mot valide dans la grille, mais il n'est pas un mot anglais valide.</p>
+    <%= link_to "Nouvelle partie", root_path, class: "btn btn-primary" %>
+  <% elsif @result == "invalid" %>
+    <p class="error"><%= @word %> ne peut pas être créé à partir de la grille d'origine.</p>
+    <%= link_to "Nouvelle partie", root_path, class: "btn btn-primary" %>
+  <% end %>
+</div>

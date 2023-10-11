@@ -13,3 +13,108 @@
  *= require_tree .
  *= require_self
  */
+ body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #ff6f61;
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.letter {
+  width: 80px;
+  height: 80px;
+  background-color: #3498db;
+  color: #ffffff;
+  font-size: 36px;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.letter:hover {
+  transform: scale(1.1);
+  background-color: #ff6f61;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+
+.button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: background-color 0.2s;
+}
+
+.button a:hover {
+  background-color: #e85d50;
+}
+
+/* Formulaire */
+.form-group {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #2a7aaf;
+}
+
+.result {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.success {
+  color: #00cc66;
+}
+
+.warning {
+  color: #ffcc00;
+}
+
+.error {
+  color: #ff3333;
+}

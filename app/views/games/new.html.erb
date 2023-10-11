@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag 'application' %>
+<h1>Le jeu des lettres</h1>
+<p>Essayez de former le mot le plus long avec ces lettres :</p>
+<div class="letters">
+  <% @letters.each do |letter| %>
+    <div class="letter"><%= letter %></div>
+  <% end %>
+</div>
+<br>
+<%= form_with(url: '/score', method: 'post', data: { turbo: false }) do |form| %>
+  <div class="form-group">
+    <%= form.text_field :word, class: 'form-control', placeholder: 'Votre suggestion de mot' %>
+  </div>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= form.submit 'Jouer', class: 'btn btn-primary' %>
+<% end %>
